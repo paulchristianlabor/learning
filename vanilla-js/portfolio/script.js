@@ -25,7 +25,7 @@ function onClick() {
 }
 
 const carousel = document.querySelector(".carousel"),
-firstImg = carousel.querySelectorAll("img")[0];
+    firstImg = carousel.querySelectorAll("img")[0];
 arrowIcons = document.querySelectorAll(".wrapper i");
 
 
@@ -49,14 +49,14 @@ arrowIcons.forEach(icon => {
 
 const autoSlide = () => {
     // If there is no image left to scroll then return from here
-    if(carousel.scrollLeft == (carousel.scrollWidth - carousel.clientWidth)) return;
+    if (carousel.scrollLeft == (carousel.scrollWidth - carousel.clientWidth)) return;
 
     positionDiff = Math.abs(positionDiff); // Making positionDiff value to positive
     let firstImgWidth = firstImg.clientWidth + 14;
     // Getting difference value that needs to add or reduce from carousel left to take middle img center
     let valDifference = firstImgWidth - positionDiff
 
-    if(carousel.scrollLeft > prevScrollLeft) { // If user is scrolling to the right
+    if (carousel.scrollLeft > prevScrollLeft) { // If user is scrolling to the right
         return carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
     }
     // If user is scrolling to the left
@@ -72,11 +72,11 @@ const dragStart = (e) => {
 
 const dragging = (e) => {
     // Scrolling images/carousel to left according to mouse pointer
-    if(!isDragStart) return;
+    if (!isDragStart) return;
     e.preventDefault();
     isDragging = true;
     carousel.classList.add("dragging");
-    positionDiff = (e.pageX || e.touches[0].pageX)- prevPageX;
+    positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
     carousel.scrollLeft = prevScrollLeft - positionDiff;
     showHideIcons();
 }
@@ -85,7 +85,7 @@ const dragStop = () => {
     isDragStart = false;
     carousel.classList.remove("dragging");
 
-    if(!isDragging) return;
+    if (!isDragging) return;
     isDragging = false;
     autoSlide();
 }

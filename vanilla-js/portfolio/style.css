@@ -3,12 +3,14 @@ Creator Name : Paul Christian Labor
 Date Created : September 1, 2022
 */
 /* Essentials Content */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html,body{
+
+html,
+body {
     height: 100%;
     width: 100%;
     background-color: #262626;
@@ -16,20 +18,24 @@ html,body{
     font-family: 'Courier New', Courier, monospace;
     font-size: 15px;
 }
-a{
+
+a {
     color: white;
     text-decoration: none;
     padding: 10%;
 }
-a:hover{
+
+a:hover {
     text-decoration: line-through;
 }
-h2{
+
+h2 {
     padding: 2%;
     text-align: center;
 }
+
 /* Hamburger Button Content */
-.hamburger{
+.hamburger {
     position: fixed;
     right: 0;
     border: none;
@@ -43,11 +49,13 @@ h2{
     display: flex;
     z-index: 1;
 }
-.hamburger:hover{
+
+.hamburger:hover {
     background-color: black;
 }
+
 /* Hidden Menu Content */
-.hiddenmenu{
+.hiddenmenu {
     position: fixed;
     height: 100%;
     width: 100%;
@@ -59,51 +67,63 @@ h2{
     transform: translateX(100%);
     z-index: 1;
 }
-.hiddenmenuopen{
+
+.hiddenmenuopen {
     transform: translateX(0%);
 }
-.hiddenmenuclose{
+
+.hiddenmenuclose {
     transform: translateX(100%);
 }
-.hiddenmenutitle{
+
+.hiddenmenutitle {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.hiddenmenutitle a{
+
+.hiddenmenutitle a {
     padding: 9%;
 }
-.hiddenmenutitle a:hover{
+
+.hiddenmenutitle a:hover {
     text-decoration: none;
 }
-.hiddenmenulinks{
+
+.hiddenmenulinks {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.hiddenmenulinks a{
+
+.hiddenmenulinks a {
     padding: 9%;
 }
-.hiddenmenulinks a:hover{
+
+.hiddenmenulinks a:hover {
     color: #997300;
 }
-.hiddenmenusocials{
+
+.hiddenmenusocials {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.hiddenmenusocials a{
+
+.hiddenmenusocials a {
     padding: 9%;
 }
-.hiddenmenusocials a:hover{
+
+.hiddenmenusocials a:hover {
     color: #997300;
 }
+
 /* Home Contents */
-.home{
+.home {
     height: 100%;
     background-image: url(img/background1.jpg);
     background-position: center;
@@ -114,32 +134,37 @@ h2{
     justify-content: center;
     align-items: center;
 }
-.homecontent{
+
+.homecontent {
     width: 100%;
     padding: 4%;
 }
+
 /* About Contents */
-.about{
+.about {
     height: 100%;
     background-color: #262626;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.aboutcontent{
+
+.aboutcontent {
     height: 90%;
     width: 90%;
     display: flex;
     flex-direction: column;
 }
-.aboutphotocontainer{
+
+.aboutphotocontainer {
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.aboutphotocontent{
+
+.aboutphotocontent {
     height: 80%;
     width: 50%;
     background-image: url(img/background3.jpg);
@@ -148,29 +173,35 @@ h2{
     background-size: cover;
     box-shadow: -10px 10px 10px #997300;
 }
-.aboutdescriptioncontainer{
+
+.aboutdescriptioncontainer {
     height: 100%;
     width: 100%;
 }
-.aboutdescriptioncontent{
+
+.aboutdescriptioncontent {
     padding: 2%;
 }
-.aboutdescriptioncontent p{
+
+.aboutdescriptioncontent p {
     padding: 2%;
 }
+
 /* Skills Contents */
-.skills{
+.skills {
     height: 100%;
     background-color: #333333;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.skillscontent{
+
+.skillscontent {
     height: 90%;
     width: 90%;
 }
-.skillsdescriptioncontainer{
+
+.skillsdescriptioncontainer {
     height: 90%;
     width: 100%;
     display: flex;
@@ -178,7 +209,8 @@ h2{
     justify-content: center;
     align-items: center;
 }
-.skillscardcontainer{
+
+.skillscardcontainer {
     border: solid 1px gray;
     height: 30%;
     width: 90%;
@@ -191,17 +223,21 @@ h2{
     justify-content: center;
     align-items: center;
 }
-.skillscardicon{
+
+.skillscardicon {
     padding: 2%;
 }
-.skillscardicon i{
+
+.skillscardicon i {
     font-size: 50px;
 }
-.skillscarddescription{
+
+.skillscarddescription {
     padding: 2%;
 }
+
 /* Projects Contents */
-.projects{
+.projects {
     height: 100%;
     background-color: #262626;
     display: flex;
@@ -210,11 +246,13 @@ h2{
     min-height: 100vh;
     padding: 0 35px;
 }
-.wrapper{
+
+.wrapper {
     max-width: 1200px;
     position: relative;
 }
-.wrapper i{
+
+.wrapper i {
     top: 50%;
     height: 46px;
     width: 46px;
@@ -228,60 +266,73 @@ h2{
     border-radius: 50%;
     transform: translateY(-50%);
 }
-.wrapper i:first-child{
+
+.wrapper i:first-child {
     left: -23px;
     display: none;
 }
-.wrapper i:last-child{
+
+.wrapper i:last-child {
     right: -23px;
 }
-.wrapper .carousel{
+
+.wrapper .carousel {
     font-size: 0px;
     cursor: pointer;
     overflow: hidden;
     white-space: nowrap;
     scroll-behavior: smooth;
 }
-.carousel.dragging{
+
+.carousel.dragging {
     cursor: grab;
     scroll-behavior: auto;
 }
-.carousel.dragging img{
+
+.carousel.dragging img {
     pointer-events: none;
 }
-.carousel img{
+
+.carousel img {
     height: 340px;
     object-fit: cover;
     margin-left: 14px;
     width: 100%;
 }
-.carousel img:first-child{
+
+.carousel img:first-child {
     margin-left: 0px;
 }
+
 /* Contact Contents */
-.contact{
+.contact {
     height: 100%;
     background-color: #333333;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.contactcontent p{
+
+.contactcontent p {
     padding: 2%;
 }
-.contactsocials{
+
+.contactsocials {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.contactsocials a{
+
+.contactsocials a {
     padding: 5%;
 }
-.contactsocials a:hover{
+
+.contactsocials a:hover {
     color: #997300;
 }
+
 /* Footer Contents */
-footer{
+footer {
     padding: 2%;
     text-align: center;
     background-color: #262626;
@@ -289,56 +340,72 @@ footer{
     justify-content: center;
     align-items: center;
 }
-@media only screen and (min-width: 720px){
-    html,body{
+
+@media only screen and (min-width: 720px) {
+
+    html,
+    body {
         font-size: 16px;
     }
-/* Hamburger Button Content */
-.hamburger{
-    display: none;
-}
-/* Hidden Menu Content */
-.hiddenmenu{
-    height: 10%;
-    background: none;
-    flex-direction: row;
-    transform: translateX(0);
-}
-.hiddenmenutitle a{
-    padding: 3%;
-}
-.hiddenmenulinks{
-    flex-direction: row;
-}
-.hiddenmenulinks a{
-    padding: 3%;
-}
-.hiddenmenusocials a{
-    padding: 3%;
-}
 
-.homecontent{
-    font-size: 40px;
-}
-.about{
-    height: 60%;
-}
-.aboutcontent{
-    flex-direction: row;
-}
-.skills{
-    height: 60%;
-}
-.skillsdescriptioncontainer{
-    flex-direction: row;
-}
-.skillscardcontainer{
-    height: 50%;
-}
-.carousel img{
-    width: calc(100% / 3);
-}
-.contact{
-    height: 70%;
-}
+    /* Hamburger Button Content */
+    .hamburger {
+        display: none;
+    }
+
+    /* Hidden Menu Content */
+    .hiddenmenu {
+        height: 10%;
+        background: none;
+        flex-direction: row;
+        transform: translateX(0);
+    }
+
+    .hiddenmenutitle a {
+        padding: 3%;
+    }
+
+    .hiddenmenulinks {
+        flex-direction: row;
+    }
+
+    .hiddenmenulinks a {
+        padding: 3%;
+    }
+
+    .hiddenmenusocials a {
+        padding: 3%;
+    }
+
+    .homecontent {
+        font-size: 40px;
+    }
+
+    .about {
+        height: 60%;
+    }
+
+    .aboutcontent {
+        flex-direction: row;
+    }
+
+    .skills {
+        height: 60%;
+    }
+
+    .skillsdescriptioncontainer {
+        flex-direction: row;
+    }
+
+    .skillscardcontainer {
+        height: 50%;
+    }
+
+    .carousel img {
+        width: calc(100% / 3);
+    }
+
+    .contact {
+        height: 70%;
+    }
 }
