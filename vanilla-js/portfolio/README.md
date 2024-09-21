@@ -1,1 +1,1 @@
-Web Developer Portfolio
+Portfolio Vanilla Javascript
