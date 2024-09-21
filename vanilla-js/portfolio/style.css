@@ -1,0 +1,344 @@
+/*
+Creator Name : Paul Christian Labor
+Date Created : September 1, 2022
+*/
+/* Essentials Content */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #262626;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+}
+a{
+    color: white;
+    text-decoration: none;
+    padding: 10%;
+}
+a:hover{
+    text-decoration: line-through;
+}
+h2{
+    padding: 2%;
+    text-align: center;
+}
+/* Hamburger Button Content */
+.hamburger{
+    position: fixed;
+    right: 0;
+    border: none;
+    background: none;
+    font-size: 30px;
+    margin: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    z-index: 1;
+}
+.hamburger:hover{
+    background-color: black;
+}
+/* Hidden Menu Content */
+.hiddenmenu{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #262626;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: transform .25s ease-in;
+    transform: translateX(100%);
+    z-index: 1;
+}
+.hiddenmenuopen{
+    transform: translateX(0%);
+}
+.hiddenmenuclose{
+    transform: translateX(100%);
+}
+.hiddenmenutitle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hiddenmenutitle a{
+    padding: 9%;
+}
+.hiddenmenutitle a:hover{
+    text-decoration: none;
+}
+.hiddenmenulinks{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.hiddenmenulinks a{
+    padding: 9%;
+}
+.hiddenmenulinks a:hover{
+    color: #997300;
+}
+.hiddenmenusocials{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hiddenmenusocials a{
+    padding: 9%;
+}
+.hiddenmenusocials a:hover{
+    color: #997300;
+}
+/* Home Contents */
+.home{
+    height: 100%;
+    background-image: url(img/background1.jpg);
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.homecontent{
+    width: 100%;
+    padding: 4%;
+}
+/* About Contents */
+.about{
+    height: 100%;
+    background-color: #262626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutcontent{
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.aboutphotocontainer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutphotocontent{
+    height: 80%;
+    width: 50%;
+    background-image: url(img/background3.jpg);
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    box-shadow: -10px 10px 10px #997300;
+}
+.aboutdescriptioncontainer{
+    height: 100%;
+    width: 100%;
+}
+.aboutdescriptioncontent{
+    padding: 2%;
+}
+.aboutdescriptioncontent p{
+    padding: 2%;
+}
+/* Skills Contents */
+.skills{
+    height: 100%;
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skillscontent{
+    height: 90%;
+    width: 90%;
+}
+.skillsdescriptioncontainer{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.skillscardcontainer{
+    border: solid 1px gray;
+    height: 30%;
+    width: 90%;
+    margin: 2%;
+    border-radius: 5px;
+    box-shadow: -10px 10px 10px #262626;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.skillscardicon{
+    padding: 2%;
+}
+.skillscardicon i{
+    font-size: 50px;
+}
+.skillscarddescription{
+    padding: 2%;
+}
+/* Projects Contents */
+.projects{
+    height: 100%;
+    background-color: #262626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 35px;
+}
+.wrapper{
+    max-width: 1200px;
+    position: relative;
+}
+.wrapper i{
+    top: 50%;
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+    position: absolute;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 46px;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+.wrapper i:first-child{
+    left: -23px;
+    display: none;
+}
+.wrapper i:last-child{
+    right: -23px;
+}
+.wrapper .carousel{
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+.carousel.dragging{
+    cursor: grab;
+    scroll-behavior: auto;
+}
+.carousel.dragging img{
+    pointer-events: none;
+}
+.carousel img{
+    height: 340px;
+    object-fit: cover;
+    margin-left: 14px;
+    width: 100%;
+}
+.carousel img:first-child{
+    margin-left: 0px;
+}
+/* Contact Contents */
+.contact{
+    height: 100%;
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contactcontent p{
+    padding: 2%;
+}
+.contactsocials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contactsocials a{
+    padding: 5%;
+}
+.contactsocials a:hover{
+    color: #997300;
+}
+/* Footer Contents */
+footer{
+    padding: 2%;
+    text-align: center;
+    background-color: #262626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (min-width: 720px){
+    html,body{
+        font-size: 16px;
+    }
+/* Hamburger Button Content */
+.hamburger{
+    display: none;
+}
+/* Hidden Menu Content */
+.hiddenmenu{
+    height: 10%;
+    background: none;
+    flex-direction: row;
+    transform: translateX(0);
+}
+.hiddenmenutitle a{
+    padding: 3%;
+}
+.hiddenmenulinks{
+    flex-direction: row;
+}
+.hiddenmenulinks a{
+    padding: 3%;
+}
+.hiddenmenusocials a{
+    padding: 3%;
+}
+
+.homecontent{
+    font-size: 40px;
+}
+.about{
+    height: 60%;
+}
+.aboutcontent{
+    flex-direction: row;
+}
+.skills{
+    height: 60%;
+}
+.skillsdescriptioncontainer{
+    flex-direction: row;
+}
+.skillscardcontainer{
+    height: 50%;
+}
+.carousel img{
+    width: calc(100% / 3);
+}
+.contact{
+    height: 70%;
+}
+}
